@@ -53,3 +53,18 @@ filetype plugin indent on
 
 " use <leader>c to comment/un-comment
 map <leader>c <c-_><c-_>
+
+" .viminfo file in .vim folder
+set viminfo+=n~/.vim/viminfo
+
+" automatically reload a file when changes occur
+set autoread
+
+" change to railscast colorscheme
+colorscheme railscasts
+
+" allow backspacing indent characters
+set backspace=indent,eol,start
+
+" no swap files
+set noswapfile
