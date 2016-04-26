@@ -6,7 +6,7 @@ nmap <left>  :3wincmd <<cr>
 nmap <right> :3wincmd ><cr>
 nmap <up>    :3wincmd +<cr>
 nmap <down>  :3wincmd -<cr>
- 
+
 " re-source vimrc with rv
 nnoremap <leader>rv :so $MYVIMRC<cr>
 
@@ -68,3 +68,10 @@ set backspace=indent,eol,start
 
 " no swap files
 set noswapfile
+
+" ignore case in search
+set ignorecase
+
+" no trailing whitespace
+match ErrorMsg '\s\+$'
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
