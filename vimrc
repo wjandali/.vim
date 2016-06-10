@@ -1,3 +1,6 @@
+" use pathogen
+execute pathogen#infect()
+
 " set leader to Spacebar
 let mapleader = "\<Space>"
 
@@ -44,9 +47,6 @@ set wildmenu
 set incsearch
 set nohlsearch
 
-" use pathogen
-execute pathogen#infect()
-
 " color syntax
 syntax on
 filetype plugin indent on
@@ -75,3 +75,14 @@ set ignorecase
 " no trailing whitespace
 match ErrorMsg '\s\+$'
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" syntastic defaults
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
