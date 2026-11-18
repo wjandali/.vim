@@ -52,7 +52,8 @@ syntax on
 filetype plugin indent on
 
 " use <leader>c to comment/un-comment
-map <leader>c <c-_><c-_>
+let g:NERDCreateDefaultMappings = 0
+map <leader>c <plug>NERDCommenterToggle
 
 " .viminfo file in .vim folder
 set viminfo+=n~/.vim/viminfo

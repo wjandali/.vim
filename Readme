@@ -1,3 +1,30 @@
+vim config
+==========
+
+Install (Vim 7.4+ reads ~/.vim/vimrc automatically, no symlink needed):
+
+    git clone --recurse-submodules https://github.com/wjandali/.vim ~/.vim
+
+Then run :Helptags inside Vim to generate plugin docs.
+
+Plugins are git submodules in bundle/, loaded by Pathogen (autoload/pathogen.vim):
+
+    ctrlp.vim      fuzzy file/buffer finder (Ctrl-p)
+    nerdcommenter  <Space>c toggles comments
+    syntastic      syntax checking; install the checkers you need
+                   (e.g. flake8, eslint, shellcheck)
+
+Update plugins:
+
+    git submodule update --remote
+
+Add a plugin:
+
+    git submodule add <url> bundle/<name>
+
+Notes
+-----
+
 re-load/reload ctags
 
 increase width of window
